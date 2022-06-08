@@ -1,0 +1,14 @@
+// Function Transition
+
+@mixin transition($property) {
+  transition: $property 250ms $bezier-timing;
+}
+
+// Mixin FontValue
+@mixin font($fw, $fs, $lh, $ls, $tt: false) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  text-transform: $tt;
+}

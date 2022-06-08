@@ -1,0 +1,18 @@
+/* Page-header style */
+
+.page-header .container {
+  display: flex;
+  align-items: center;
+}
+
+.page-header.link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+  border: none;
+}
+
+.page-header {
+  border-bottom: 1px solid#ECECEC;
+}

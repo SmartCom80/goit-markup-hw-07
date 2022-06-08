@@ -1,0 +1,253 @@
+/* Modal window */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  visibility: visible;
+
+  @include transition(opacity);
+  @include transition(visibility);
+
+  // transition: opacity 250ms var(--bezier-timing),
+  //   visibility 250ms var(--bezier-timing);
+
+  &.is-hidden {
+    @extend %hidden;
+    // visibility: hidden;
+    // opacity: 0;
+    // pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+
+  box-shadow: $cardSet-shadow;
+  background-color: getColor("pr-bg-color");
+
+  @include transition(box-shadow);
+  border-radius: 4px;
+
+  //   background: var(--pr-bg-color);
+  //   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  //     0px 2px 1px rgba(0, 0, 0, 0.2);
+  //   transition: box-shadow 250ms var(--bezier-timing);
+}
+
+.modal-close {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0;
+
+  @include transition(fill);
+  // transition: fill 250ms var(--bezier-timing);
+
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: getColor("accent-color");
+  }
+}
+
+// .modal-close:hover,
+// .modal-close:focus {
+//   fill: getColor("accent-color");
+// }
+
+/* Callback Form Styles */
+.callback.form {
+  height: 100%;
+  justify-content: center;
+}
+
+.callback.title {
+  margin-bottom: 12px;
+  text-align: center;
+
+  @include font(700, 20px, 1.15, 0.03em);
+  // font-weight: 700;
+  // font-size: 20px;
+  // line-height: 1.15;
+  // letter-spacing: 0.03em;
+
+  color: getColor("pr-color");
+}
+
+.form-field {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  display: inline-block;
+
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--sec-text-color);
+}
+
+.form-input {
+  padding: 11px 42px;
+  width: 100%;
+
+  font-size: inherit;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: border 250ms var(--bezier-timing);
+}
+
+.form-icon {
+  position: absolute;
+  display: inline-block;
+  top: 65%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: inherit;
+  transition: fill 250ms var(--bezier-timing);
+}
+.comment-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.comment-input {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+
+  font-size: inherit;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: border 250ms var(--bezier-timing);
+}
+
+.comment-input::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-input:focus,
+.comment-input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.checkbox-field {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--sec-text-color);
+}
+
+.checkbox {
+  @extend %hidden;
+
+  top: 50%;
+  left: 21px;
+  transform: translateY(-50%);
+
+  // position: absolute;
+  // top: 50%;
+  // left: 21px;
+  // transform: translateY(-50%);
+  // width: 1px;
+  // height: 1px;
+  // margin: -1px;
+  // border: 0;
+  // padding: 0;
+  // white-space: nowrap;
+  // clip-path: inset(100%);
+  // clip: rect(0 0 0 0);
+  // overflow: hidden;
+}
+
+.uncheck-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  opacity: 1;
+
+  @include transition(opacity);
+  // transition: opacity 250ms var(--bezier-timing);
+}
+
+.check-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  opacity: 0;
+
+  @include transition(opacity);
+  // transition: opacity 250ms var(--bezier-timing);
+}
+
+.checkbox-link {
+  padding: 0px;
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.checkbox:checked ~ .uncheck-icon {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .check-icon {
+  opacity: 1;
+}
+
+.callback .submit-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 55px;
+  padding-right: 55px;
+}

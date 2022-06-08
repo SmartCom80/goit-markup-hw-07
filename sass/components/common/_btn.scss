@@ -1,0 +1,19 @@
+/* Buttons */
+.button {
+  display: block;
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+
+  color: getColor("pr-color");
+  background-color: getColor("btn-bg-color");
+  cursor: pointer;
+  font-family: inherit;
+
+  @include transition(color);
+  @include transition(background-color);
+  @include transition(box-shadow);
+}
+// transition: color 250ms var(--bezier-timing),
+//   background-color 250ms var(--bezier-timing),
+//   box-shadow 250ms var(--bezier-timing);

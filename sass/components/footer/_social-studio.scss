@@ -1,0 +1,25 @@
+/* Footer social link */
+
+.studio-links {
+  margin-left: 70px;
+}
+
+.studio-links .title,
+.signup .title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--inv-text-color);
+}
+
+.studio-links .link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.studio-links .icon {
+  fill: var(--inv-text-color);
+}
