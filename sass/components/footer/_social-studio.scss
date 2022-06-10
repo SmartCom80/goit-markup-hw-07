@@ -25,7 +25,12 @@
 .studio__socialLink {
     @extend .social__link;
    background-color: rgba(255, 255, 255, 0.1);
-  
+   @include transition(background-color);
+
+  &:hover,
+  &:focus {
+   background-color: getColor('accent-color');
+  }
 }
 
 .studio__socialIcon {
