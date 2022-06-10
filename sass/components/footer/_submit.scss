@@ -1,58 +1,75 @@
 /* Footer SignUp form */
 
-.signup {
+.follow {
   width: 570px;
   margin-left: 93px;
 }
 
-.signup-field {
+.follow__title {
+margin-bottom: 20px;
+
+  @include font(700, 14px, 1.25, 0.03em, uppercase);
+  // font-family: 'Roboto';
+  // font-style: normal;
+  // font-weight: 700;
+  // font-size: 14px;
+  // line-height: 16px;
+  // letter-spacing: 0.03em;
+  // text-transform: uppercase;
+  
+  color: getColor('inv-color');
+}
+
+.follow__field {
   display: flex;
   justify-content: flex-end;
 }
 
-.signup-field label {
-  width: 100%;
-}
-
-.signup-field input {
-  width: inherit;
-  padding: 15px 16px;
+.follow__input {
+  width: 358px;
+  padding: 14px 16px;
 
   font-family: inherit;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: var(--inv-text-color);
+  @include font(400, 16px, 1.25, 0.03em);
+
+  // font-size: 16px;
+  // line-height: 1.25;
+  // letter-spacing: 0.03em;
+  color: getColor('inv-color');
   background-color: transparent;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
-  transition: border 250ms var(--bezier-timing);
+  @include transition(border);
+  //transition: border 250ms var(--bezier-timing);
+
+  .follow__field:focus &,
+  .follow__field:hover & {
+    border: 1px solid getColor('accent-color');
+  }
+
+  &::placeholder {
+    @include font(400, 16px, 1.25, 0.03em);
+  
+    // font-size: 16px;
+    // line-height: 1.25;
+    // letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
-.signup-field:focus input,
-.signup-field:hover input {
-  border: 1px solid var(--accent-color);
-}
+.follow__btn {
+  @extend .btn;
 
-.signup-field input::placeholder {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.signup .submit-btn {
   display: inline-flex;
   padding-left: 29px;
   padding-right: 28px;
   margin-left: 12px;
 }
 
-.submit-btn .icon {
+.follow__icon {
   display: block;
   margin-left: 10px;
 }

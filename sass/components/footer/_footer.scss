@@ -3,23 +3,30 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  background-color: var(--sec-bg-color);
+  background-color: getColor('sec-bg-color');
 }
 
-.footer .container {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
 
-.footer.link,
-.address-link {
+.footer__link {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer__link,
+.address__link {
   text-decoration-line: none;
 }
 
-.logo.footer {
-  margin-bottom: 20px;
-  padding-top: 0;
-  padding-bottom: 0;
+.footer__logo{
+  @extend .logo;
 
-  color: var(--inv-text-color);
+  color: getColor('inv-color');
+}
+
+.footer__logo--accent {
+  color: getColor('accent-color');
 }

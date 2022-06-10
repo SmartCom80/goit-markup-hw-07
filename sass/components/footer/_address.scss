@@ -3,28 +3,39 @@
   font-style: normal;
 }
 
-.address-link {
+.address__post {
+  display: inline-block;
+  margin-bottom: 9px;
+
+  color: getColor('inv-color');
+  
+  @include font(400, 14px, 1.71, 0.03em);
+  // line-height: 1.71;
+  // letter-spacing: 0.03em;
+}
+
+.address__list {
   display: block;
-  margin-bottom: 9px;
-
-  color: var(--inv-text-color);
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 
-.address .item:not(:last-child) {
+.address__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.address .link {
+.address__link {
   color: rgba(255, 255, 255, 0.6);
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 
-  transition: color 250ms var(--bezier-timing);
+  @include font(400, 14px, 1.71, 0.03em);
+  // line-height: 1.71;
+  // letter-spacing: 0.03em;
+
+  @include transition(color);
+  //transition: color 250ms var(--bezier-timing);
+
+  &:hover,
+  &:focus {
+    color: getColor('accent-color');
+  }
 }
 
-.address .link:hover,
-.address .link:focus {
-  color: var(--accent-color);
-}
+

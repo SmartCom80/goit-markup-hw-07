@@ -1,57 +1,62 @@
 /* Section Our Clients */
 
-.section.clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+// .section.clients {
+//   //   display: flex;
+//   //   padding-top: 94px;
+//   //   padding-bottom: 94px;
+// }
+
+.clients__title {
+  @include font(700, 36px, 1.17, 0.03em);
+  //margin-bottom: 50px;
+  // text-align: center;
+
+  // @include font(700, 36, 1.17, 0.03);
+  // font-weight: 700;
+  // font-size: 36px;
+  // line-height: 1.16;
+
+  // letter-spacing: 0.03em;
 }
 
-.clients .section-title {
-  margin-bottom: 50px;
+// .clients__list {
+//   /* display: flex; */
+//   // justify-content: center;
+// }
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
+.clients__item:not(:first-child) {
+  margin-left: $gap-cardSet;
 }
 
-.clients .list {
-  /* display: flex; */
-  justify-content: center;
-  @extend %list;
-}
+.clients__link {
+  @include centering_content();
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 
-.clients .item:not(:first-child) {
-  margin-left: var(--gap-card-set);
-}
-
-.clients .link {
-  display: flex;
   width: 170px;
   height: 92px;
 
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--pr-icon-fill);
+  border: 1px solid getColor('pr-icon-fill');
   border-radius: 4px;
 
   cursor: pointer;
+  @include transition(border);
+  // transition: border 250ms var(--bezier-timing);
 
-  transition: border 250ms var(--bezier-timing);
+  &:hover,
+  &:focus {
+    border: 1px solid getColor('accent-color');
+  }
 }
 
-.clients .icon {
-  fill: var(--pr-icon-fill);
+.clients__icon {
+  fill: getColor('pr-icon-fill');
+  @include transition(fill);
+  // transition: fill 250ms var(--bezier-timing);
 
-  transition: fill 250ms var(--bezier-timing);
-}
-
-.clients .link:hover,
-.clients .link:focus {
-  border: 1px solid var(--accent-color);
-}
-
-.clients .link:hover .icon,
-.clients .link:focus .icon {
-  fill: var(--accent-color);
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: getColor('accent-color');
+  }
 }

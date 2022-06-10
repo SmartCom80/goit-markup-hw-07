@@ -1,25 +1,33 @@
 /* Footer social link */
 
-.studio-links {
-  margin-left: 70px;
+.studio {
+   margin-left: 70px;
 }
 
-.studio-links .title,
-.signup .title {
-  margin-bottom: 20px;
+.studio__title {
+   margin-bottom: 20px;
 
-  font-weight: 700;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+   @include font(700, 14px, 1.14, 0.03em, uppercase);
+//    font-weight: 700;
+//    line-height: 1.14;
+//    letter-spacing: 0.03em;
+//    text-transform: uppercase;
 
-  color: var(--inv-text-color);
+   color: getColor('inv-color');
 }
 
-.studio-links .link {
-  background-color: rgba(255, 255, 255, 0.1);
+.social__card {
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+    
+.studio__socialLink {
+    @extend .social__link;
+   background-color: rgba(255, 255, 255, 0.1);
+  
 }
 
-.studio-links .icon {
-  fill: var(--inv-text-color);
+.studio__socialIcon {
+   fill: getColor('inv-color');
 }
