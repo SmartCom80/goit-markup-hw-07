@@ -1,16 +1,10 @@
 /* Section Our Works */
-// .section.work {
-//   padding-top: 47px;
-//   padding-bottom: 99px;
-// }
 
 // .work .list {
 //   /* display: flex; */
 // }
 
 .works__card {
-  @include centering_content (block);
-  
   position: relative;
 
   &:not(:first-child) {
@@ -19,15 +13,14 @@
 }
 
 .works__subtitle {
-  display: inline-block;
+  @include centering_content ();
   position: absolute;
   left: 0;
   bottom: 0;
   
   width: 100%;
-  padding: 27px 0px;
-  text-align: center;
-
+  height: 70px;
+  
   @include font(700, 14px, 1.14, 0.03em, uppercase);
   // font-weight: 700;
   // line-height: 1.14;

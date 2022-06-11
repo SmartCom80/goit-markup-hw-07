@@ -1,10 +1,6 @@
 /* Hero */
 
 .hero {
-  padding-top: 0;
-}
-
-.hero__bgImg {
   max-width: 1600px;
   height: 600px;
   padding-top: 200px;
@@ -51,7 +47,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include transition(background-color);
+  @include transition (background-color);
 
   &:hover,
   &:focus {

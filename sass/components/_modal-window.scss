@@ -11,6 +11,7 @@
   visibility: visible;
 
   @include transition(opacity);
+  
   @include transition(visibility);
 
   // transition: opacity 250ms var(--bezier-timing),
@@ -170,13 +171,12 @@
 
   @include transition(border);
   // transition: border 250ms var(--bezier-timing);
-
+  &:hover,
   &:focus {
     border: 1px solid getColor("accent-color");
   }
 
   &::placeholder {
-  
     @include font(400, 14px, 1.14, 0.01em);
     // font-size: 14px;
     // line-height: 1.14;
@@ -221,6 +221,11 @@
   .checkbox:checked ~ & {
     opacity: 0;
   }
+  .checkbox__field:hover &,
+  .checkbox__field:focus & {
+    fill: getColor('accent-color');
+  }
+
 }
 
 .check__icon {

@@ -12,6 +12,13 @@
   @include font(400, 14px, 1.71, 0.03em);
   // line-height: 1.71;
   // letter-spacing: 0.03em;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+   color: getColor('accent-color');
+  }
 }
 
 .address__list {
