@@ -1,4 +1,8 @@
 /* Section Features */
+.feature {
+  padding-top: 94px;
+}
+
 .feature__title {
   @extend %hidden;
 }

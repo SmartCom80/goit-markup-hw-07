@@ -16,8 +16,8 @@
   // line-height: 1.14;
   // letter-spacing: 0.02em;
 
-  @include transition(color);
-  //transition: color 250ms var(--bezier-timing);
+  //@include transitionable(color);
+  transition: color 250ms var(--bezier-timing);
 
   &:hover,
   &:focus {
@@ -31,7 +31,8 @@
 
   color: getColor('accent-color');
 
-  @include transition(color);
+  //@include transitionable(color);
+  transition: color 250ms var(--bezier-timing);
 
   &::after {
     content: "";
@@ -47,8 +48,10 @@
     border: 2px solid getColor('accent-color');
     border-radius: 2px;
 
-    @include transition(background-color);
-    @include transition(border);
+    //@include transitionable(background-color);
+    //@include transitionable(border);
+    transition: background-color 250ms var(--bezier-timing),
+      border 250ms var(--bezier-timing);
   }
 }
 

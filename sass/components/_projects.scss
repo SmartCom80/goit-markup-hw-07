@@ -1,7 +1,6 @@
 /* Section Filters */
 .portfolio {
   padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .portfolio__title {
@@ -38,9 +37,12 @@
   color: getColor('pr-color');    
   background-color: getColor('btn-bg-color');
 
-  @include transition(color); 
-  @include transition(background-color);
-  @include transition(box-shadow);
+  // @include transitionable(color); 
+  // @include transitionable(background-color);
+  // @include transitionable(box-shadow);
+  transition: color 250ms var(--bezier-timing),
+    background-color 250ms var(--bezier-timing),
+    transform 250ms var(--bezier-timing);
 
   &:hover,
   &:focus {
@@ -60,7 +62,8 @@
   color: getColor('inv-color');
   background-color: getColor('accent-color');
 
-  @include transition(box-shadow);
+  //@include transitionable(box-shadow);
+  transition: box-shadow 250ms var(--bezier-timing);
 
   &:hover,
   &:focus {
@@ -86,20 +89,20 @@
 
 .project__link {
   display: block;
-  cursor: pointer;
+
+   //@include transitionable(box-shadow);
+   transition: box-shadow 250ms var(--bezier-timing);
 
   &:hover,
   &:focus {
-    box-shadow: $projectSet-shadow;
-
-    @include transition(box-shadow);
+    box-shadow: $projectSet-shadow;    
       
     // box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
     // 0px 4px 4px rgba(0, 0, 0, 0.06),
     //   1px 4px 6px rgba(0, 0, 0, 0.16);
-    
   }
 }
+
 .cardThumb {
   position: relative;
   overflow: hidden;
@@ -121,13 +124,11 @@
   opacity: 0;
   transform: translateY(100%);
 
-  @include transition(opacity);
-  @include transition(background-color);
-  @include transition(transform);
+  // @include transitionable(opacity);
+  // @include transitionable(background-color);
+  // @include transitionable(transform);
 
-  // transition: opacity 250ms var(--bezier-timing),
-  //   background-color 250ms var(--bezier-timing),
-  //   transform 250ms var(--bezier-timing);
+  transition: opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing), transform 250ms var(--bezier-timing);
 
   .project__link:hover &,
   .project__link:focus & {

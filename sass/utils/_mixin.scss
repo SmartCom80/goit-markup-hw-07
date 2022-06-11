@@ -1,5 +1,5 @@
 // Function Transition
-@mixin transition($property) {
+@mixin transitionable($property) {
   transition: $property 250ms $bezier-timing;
 }
 
@@ -11,7 +11,6 @@
   letter-spacing: $ls;
   text-transform: $tt;
 }
-
 
 // Mixin Centering Content
 @mixin centering_content($mode: flex) {

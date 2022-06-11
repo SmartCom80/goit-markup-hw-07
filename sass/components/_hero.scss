@@ -47,7 +47,8 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include transition (background-color);
+  //@include transitionable (background-color);
+  transition: background-color 250ms var(--bezier-timing);
 
   &:hover,
   &:focus {

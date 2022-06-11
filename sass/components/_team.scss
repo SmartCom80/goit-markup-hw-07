@@ -60,8 +60,8 @@
   height: 44px;
   border-radius: 50%;
 
-  @include transition(background-color);
-  // transition: background-color 250ms var(--bezier-timing);
+  //@include transitionable(background-color);
+  transition: background-color 250ms var(--bezier-timing);
 
   &:hover,
   &:focus {
@@ -72,8 +72,8 @@
 .social__icon {
   fill: getColor('pr-icon-fill');
 
-  @include transition(fill);
-  // transition: fill 250ms var(--bezier-timing);
+  //@include transitionable(fill);
+  transition: fill 250ms var(--bezier-timing);
 
   .social__link:hover &,
   .social__link:focus & {
