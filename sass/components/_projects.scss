@@ -128,7 +128,7 @@
   // @include transitionable(background-color);
   // @include transitionable(transform);
 
-  transition: opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing), transform 250ms var(--bezier-timing);
+  transition: transform 250ms var(--bezier-timing),opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing);
 
   .project__link:hover &,
   .project__link:focus & {

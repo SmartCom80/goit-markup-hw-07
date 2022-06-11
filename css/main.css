@@ -1056,8 +1056,8 @@ body {
           transform: translateY(100%);
   -webkit-transition: opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing), -webkit-transform 250ms var(--bezier-timing);
   transition: opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing), -webkit-transform 250ms var(--bezier-timing);
-  transition: opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing), transform 250ms var(--bezier-timing);
-  transition: opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing), transform 250ms var(--bezier-timing), -webkit-transform 250ms var(--bezier-timing);
+  transition: transform 250ms var(--bezier-timing), opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing);
+  transition: transform 250ms var(--bezier-timing), opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing), -webkit-transform 250ms var(--bezier-timing);
 }
 
 .project__link:hover .cardThumb__overlay,
