@@ -13,8 +13,8 @@
   // @include transitionable(opacity);
   // @include transitionable(visibility);
 
-  transition: opacity 250ms var(--bezier-timing),
-    visibility 250ms var(--bezier-timing);
+  transition: opacity 250ms $bezier-timing,
+    visibility 250ms $bezier-timing;
 
   &.is-hidden {
     @extend %hidden;
@@ -37,7 +37,7 @@
   background-color: getColor("pr-bg-color");
 
   //@include transitionable(box-shadow);
-  transition: box-shadow 250ms var(--bezier-timing);
+  transition: box-shadow 250ms $bezier-timing;
 
   border-radius: 4px;
 
@@ -62,7 +62,7 @@
   padding: 0;
 
   //@include transitionable(fill);
-  transition: fill 250ms var(--bezier-timing);
+  transition: fill 250ms $bezier-timing;
 
   background-color: transparent;
   cursor: pointer;
@@ -124,7 +124,7 @@
   cursor: pointer;
 
   //@include transitionable(border);
-  transition: border 250ms var(--bezier-timing);
+  transition: border 250ms $bezier-timing;
 
   &:hover,
   &:focus {
@@ -141,7 +141,7 @@
   fill: currentColor;
 
   //@include transitionable(fill);
-  transition: fill 250ms var(--bezier-timing);
+  transition: fill 250ms $bezier-timing;
 
   .form__input:focus ~ & {
     fill: getColor('accent-color');
@@ -166,7 +166,7 @@
   cursor: pointer;
 
   //@include transitionable(border);
-  transition: border 250ms var(--bezier-timing);
+  transition: border 250ms $bezier-timing;
 
   &:hover,
   &:focus {
@@ -213,7 +213,7 @@
   opacity: 1;
 
   //@include transitionable(opacity);
-  transition: opacity 250ms var(--bezier-timing);
+  transition: opacity 250ms $bezier-timing;
 
   .checkbox:checked ~ & {
     opacity: 0;
@@ -233,7 +233,7 @@
   opacity: 0;
 
   //@include transitionable(opacity);
-  transition: opacity 250ms var(--bezier-timing);
+  transition: opacity 250ms $bezier-timing;
 
   .checkbox:checked ~ & {
     opacity: 1;
@@ -253,7 +253,7 @@
   margin-right: auto;
 
   //@include transitionable(background-color);
-  transition: background-color 250ms var(--bezier-timing);
+  transition: background-color 250ms $bezier-timing;
 
   &:hover,
   &:focus {

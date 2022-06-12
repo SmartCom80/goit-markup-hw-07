@@ -1,8 +1,4 @@
 /* Section Filters */
-.portfolio {
-  padding-top: 94px;
-}
-
 .portfolio__title {
   @extend %hidden;
 }
@@ -16,7 +12,7 @@
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter__name {
@@ -40,9 +36,9 @@
   // @include transitionable(color); 
   // @include transitionable(background-color);
   // @include transitionable(box-shadow);
-  transition: color 250ms var(--bezier-timing),
-    background-color 250ms var(--bezier-timing),
-    transform 250ms var(--bezier-timing);
+  transition: color 250ms $bezier-timing,
+    background-color 250ms $bezier-timing,
+    transform 250ms $bezier-timing;
 
   &:hover,
   &:focus {
@@ -63,7 +59,7 @@
   background-color: getColor('accent-color');
 
   //@include transitionable(box-shadow);
-  transition: box-shadow 250ms var(--bezier-timing);
+  transition: box-shadow 250ms $bezier-timing;
 
   &:hover,
   &:focus {
@@ -91,7 +87,7 @@
   display: block;
 
    //@include transitionable(box-shadow);
-   transition: box-shadow 250ms var(--bezier-timing);
+   transition: box-shadow 250ms $bezier-timing;
 
   &:hover,
   &:focus {
@@ -128,7 +124,7 @@
   // @include transitionable(background-color);
   // @include transitionable(transform);
 
-  transition: transform 250ms var(--bezier-timing),opacity 250ms var(--bezier-timing), background-color 250ms var(--bezier-timing);
+  transition: transform 250ms $bezier-timing, opacity 250ms $bezier-timing, background-color 250ms $bezier-timing;
 
   .project__link:hover &,
   .project__link:focus & {

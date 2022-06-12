@@ -1,7 +1,7 @@
 // Function Transition
-@mixin transitionable($property) {
-  transition: $property 250ms $bezier-timing;
-}
+// @mixin transitionable($property) {
+//   transition: $property 250ms $bezier-timing;
+// }
 
 // Mixin FontValue
 @mixin font($fw, $fs, $lh, $ls, $tt: false) {

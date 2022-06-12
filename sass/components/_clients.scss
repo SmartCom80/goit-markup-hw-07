@@ -40,7 +40,7 @@
   border-radius: 4px;
 
   //@include transitionable(border);
-  transition: border 250ms var(--bezier-timing);
+  transition: border 250ms $bezier-timing;
 
   &:hover,
   &:focus {
@@ -51,7 +51,7 @@
 .clients__icon {
   fill: getColor('pr-icon-fill');
   //@include transitionable(fill);
-  transition: fill 250ms var(--bezier-timing);
+  transition: fill 250ms $bezier-timing;
 
   .clients__link:hover &,
   .clients__link:focus & {

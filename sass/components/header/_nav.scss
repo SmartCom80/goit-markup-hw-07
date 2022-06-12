@@ -17,7 +17,7 @@
   // letter-spacing: 0.02em;
 
   //@include transitionable(color);
-  transition: color 250ms var(--bezier-timing);
+  transition: color 250ms $bezier-timing;
 
   &:hover,
   &:focus {
@@ -32,7 +32,7 @@
   color: getColor('accent-color');
 
   //@include transitionable(color);
-  transition: color 250ms var(--bezier-timing);
+  transition: color 250ms $bezier-timing;
 
   &::after {
     content: "";
@@ -50,8 +50,8 @@
 
     //@include transitionable(background-color);
     //@include transitionable(border);
-    transition: background-color 250ms var(--bezier-timing),
-      border 250ms var(--bezier-timing);
+    transition: background-color 250ms $bezier-timing,
+      border 250ms $bezier-timing;
   }
 }
 

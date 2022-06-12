@@ -21,7 +21,7 @@
   // letter-spacing: 0.02em;
   
   //@include transitionable(color);
-  transition: color 250ms var(--bezier-timing);
+  transition: color 250ms $bezier-timing;
 
   &:hover,
   &:focus {
@@ -35,5 +35,5 @@
   fill: currentColor;
 
   //@include transitionable(fill);
-  transition: fill 250ms var(--bezier-timing);
+  transition: fill 250ms $bezier-timing;
 }

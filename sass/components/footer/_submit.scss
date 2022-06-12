@@ -43,7 +43,7 @@ margin-bottom: 20px;
   border-radius: 4px;
 
   //@include transitionable(border);
-  transition: border 250ms var(--bezier-timing);
+  transition: border 250ms $bezier-timing;
 
   .follow__field:focus &,
   .follow__field:hover & {
