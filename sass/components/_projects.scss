@@ -15,30 +15,25 @@
   margin-bottom: 50px;
 }
 
-.filter__name {
-  @include font(500, 16px, 1.62, 0.03em);
-  // font-weight: 500;
-  // font-size: 16px;
-  // line-height: 1.62;
-  text-align: center;
-}
-
 .filter__item:not(:first-child) {
   margin-left: 8px;
 }
 
 .filter__btn {
   @extend .btn__filtering;
-  
+
   color: getColor('pr-color');    
   background-color: getColor('btn-bg-color');
+
+  @include font(500, 16px, 1.62, 0.03em);
+  text-align: center;
 
   // @include transitionable(color); 
   // @include transitionable(background-color);
   // @include transitionable(box-shadow);
   transition: color 250ms $bezier-timing,
     background-color 250ms $bezier-timing,
-    transform 250ms $bezier-timing;
+    box-shadow 250ms $bezier-timing;
 
   &:hover,
   &:focus {

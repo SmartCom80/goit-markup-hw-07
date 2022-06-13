@@ -18,9 +18,11 @@
 
   &.is-hidden {
     @extend %hidden;
-    // visibility: hidden;
-    // opacity: 0;
-    // pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 250ms $bezier-timing,
+    visibility 250ms $bezier-timing, overflow 250ms $bezier-timing;
   }
 }
 
@@ -31,13 +33,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10000;
   padding: 40px;
 
   box-shadow: $cardSet-shadow;
   background-color: getColor("pr-bg-color");
 
   //@include transitionable(box-shadow);
-  transition: box-shadow 250ms $bezier-timing;
+  transition: box-shadow 250ms $bezier-timing, visibility 250ms $bezier-timing, opacity 250ms $bezier-timing;
 
   border-radius: 4px;
 
@@ -213,7 +216,7 @@
   opacity: 1;
 
   //@include transitionable(opacity);
-  transition: opacity 250ms $bezier-timing;
+  transition: opacity 250ms $bezier-timing, fill 250ms $bezier-timing;
 
   .checkbox:checked ~ & {
     opacity: 0;
@@ -246,7 +249,7 @@
   color: getColor('accent-color');
 }
 
-.btn__send{
+.btn__send {
   @extend .btn;
   align-items: flex-end;
   margin-left: auto;
